@@ -1,0 +1,94 @@
+/* carbon pallete from IBM */
+:root {
+  --ansi-black:     #262626;
+  --ansi-red:       #ee5396;
+  --ansi-green:     #42be65;
+  --ansi-yellow:    #ffe97b;
+  --ansi-blue:      #33b1ff;
+  --ansi-magenta:   #ff7eb6;
+  --ansi-cyan:      #3ddbd9;
+  --ansi-white:     #dde1e6;
+
+  --bright-black:   #393939;
+  --bright-red:     #ee5396;
+  --bright-green:   #42be65;
+  --bright-yellow:  #ffe97b;
+  --bright-blue:    #33b1ff;
+  --bright-magenta: #ff7eb6;
+  --bright-cyan:    #3ddbd9;
+  --bright-white:   #ffffff;
+
+  /* Optional background and foreground */
+  --background-color: #161616;
+  --foreground-color: #f2f4f8;
+  --font-size: 16px;
+}
+
+
+* {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: monospace;
+  /* font-size: var(--font-size) */
+}
+
+
+body, h1, h2, h3, h4, h5, h6, pre, code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--font-size);
+}
+
+
+.cursor {
+  content: "";
+  width: 0.1em;
+  height: 1em;
+  background: var(--foreground-color);
+  display: inline-block;
+  transform: translateY(0.2em);
+  animation: cursor-blink 1.0s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.prompt {
+  background-color: transparent;
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+
+h2 {
+  /* color: var(--background-color); */
+  background-color: var(--ansi-black)
+}
+
+a {
+  color: var(--ansi-magenta)
+}
+
+.cmd {
+  color: var(--ansi-blue);
+  font-weight: normal;
+  /* background-color: var(--bright-black) */
+}
+
+.str {
+  color: var(--ansi-green);
+  font-weight: normal;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+blockquote {
+  border-left: 0.2em solid var(--bright-black); /* line color and thickness */
+  margin-left: 0;
+  padding-left: 1em;
+}
